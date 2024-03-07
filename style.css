@@ -1,8 +1,8 @@
 /* Custom styles for Inventory POS index page */
 
-body {
-    font-family: Arial, sans-serif;
-  }
+html, body {
+  height: 100%;
+}
   
   header {
     background-color: #343a40;
@@ -25,9 +25,16 @@ body {
   .container p {
     margin-bottom: 10px;
   }
+
+  .content-wrap {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
   
-  footer p {
-    margin: 0;
+  .footer {
+    margin-top: auto !important;
+    
   }
   
   @media (max-width: 767px) {

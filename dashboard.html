@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modern Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="dashstyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="sidebar vh-100">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="productListingDropdown" data-toggle="dropdown">Product Listing</a>
+                    <div class="dropdown-menu" aria-labelledby="productListingDropdown">
+                      <a class="dropdown-item" href="category1.html">Category 1</a>
+                      <a class="dropdown-item" href="category2.html">Category 2</a>
+                      <a class="dropdown-item" href="category3.html">Category 3</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sales-management.html">Sales Management</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="customer-management.html">Customer Management</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="reports.html">Reports</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="settings.html">Settings</a>
+                  </li>
+                </ul>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-12 main-content">                
+                <div class="chart-container">
+                    <canvas id="myChart"></canvas>
+                </div>                 
+            </div>
+        </div>
+    </div>
+
+    <script src="chart.js"></script>
+</body>
+</html>
