@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Listing</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="dashstyle.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0-alpha2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
   <style>
     /* Add your custom CSS styles here */
     .card {
@@ -27,38 +28,106 @@
   </style>
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="sidebar vh-100">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link" href="dashboard.html">Dashboard</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="productListingDropdown" data-toggle="dropdown">Product Listing</a>
-            <div class="dropdown-menu" aria-labelledby="productListingDropdown">
-              <a class="dropdown-item" href="category1.html">Category 1</a>
-              <a class="dropdown-item" href="category2.html">Category 2</a>
-              <a class="dropdown-item" href="category3.html">Category 3</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sales-management.html">Sales Management</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="customer-management.html">Customer Management</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="reports.html">Reports</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="settings.html">Settings</a>
-          </li>
-        </ul>
+  <div class="wrapper">
+    <aside id="sidebar" class="js-sidebar">
+      <!-- Content For Sidebar -->
+      <div class="h-100">
+          <div class="sidebar-logo">
+              <a href="#">Inventory POS</a>
+          </div>
+          <ul class="sidebar-nav">
+              <li class="sidebar-header">
+                  Admin Elements
+              </li>
+              <li class="sidebar-item">
+                  <a href="dashboard.html" class="sidebar-link">
+                      <i class="fa-solid fa-list pe-2"></i>
+                      Dashboard
+                  </a>
+              </li>
+              <li class="sidebar-item">
+                  <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
+                      aria-expanded="false"><i class="fa-solid fa-file-lines pe-2"></i>
+                      Pages
+                  </a>
+                  <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                      <li class="sidebar-item">
+                          <a href="sales-management.html" class="sidebar-link">Sales Management</a>
+                      </li>
+                      <li class="sidebar-item">
+                          <a href="customer-management.html" class="sidebar-link">Customer Management</a>
+                      </li>
+                      <li class="sidebar-item">
+                        <a href="reports.html" class="sidebar-link">Reports</a>
+                    </li>
+                  </ul>
+              </li>
+              <li class="sidebar-item">
+                  <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
+                      aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
+                      Products
+                  </a>
+                  <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                      <li class="sidebar-item">
+                          <a href="category1.html" class="sidebar-link">Category 1</a>
+                      </li>
+                      <li class="sidebar-item">
+                          <a href="category2.html" class="sidebar-link">Category 2</a>
+                      </li>
+                      <li class="sidebar-item">
+                          <a href="category3.html" class="sidebar-link">Category 3</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="sidebar-item">
+                  <a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
+                      aria-expanded="false"><i class="fa-regular fa-user pe-2"></i>
+                      Auth
+                  </a>
+                  <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                      <li class="sidebar-item">
+                          <a href="#" class="sidebar-link">Login</a>
+                      </li>
+                      <li class="sidebar-item">
+                          <a href="#" class="sidebar-link">Register</a>
+                      </li>
+                      <li class="sidebar-item">
+                          <a href="#" class="sidebar-link">Forgot Password</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="sidebar-item">
+                  <a href="qr-code.html" class="sidebar-link">
+                      <i class="fa-solid fa-qrcode pe-2"></i>
+                      Scanner                           
+                  </a>
+              </li>                
+          </ul>
       </div>
-      <div class="col-lg-9 col-md-8 col-sm-12 main-content">
-        <div class="container mt-5">
-          <h1 class="text-center mb-4">Product Category 3</h1>
+    </aside>
+    <div class="main">
+      <nav class="navbar navbar-expand px-3 border-bottom">
+        <button class="btn" id="sidebar-toggle" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                        <img src="img/poro.jpg" class="avatar img-fluid rounded" alt="">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a href="#" class="dropdown-item">Profile</a>
+                        <a href="settings.html" class="dropdown-item">Setting</a>
+                        <a href="login.html" class="dropdown-item">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+      </nav>
+      <main class="content">
+        <div class="container mt-3">
+          <h1 class="text-center mb-4">Category 3</h1>
           <div class="row">
             <div class="col-md-4">
               <div class="card mb-4">
@@ -92,12 +161,18 @@
             </div>
           </div>
         </div>
-      </div>
+      </main>
+      <footer class="footer">
+        <!-- Footer content goes here -->
+      </footer>
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/app.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0-alpha2/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -79,6 +79,17 @@
             margin: 2px;
             font-size: 30px;
         }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .outer-box {
+                grid-template-columns: 1fr; /* Change to a single column layout */
+                height: auto; /* Allow the height to adjust based on content */
+            }
+            .inventory-box {
+                order: 2; /* Move the inventory box to the bottom */
+                margin-top: 20px; /* Add some spacing */
+            }
+        }
     </style>
 </head>
 <body>
